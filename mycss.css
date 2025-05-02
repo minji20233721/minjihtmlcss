@@ -1,0 +1,19 @@
+header,nav,aside,section{
+    border:1px 
+}
+
+
+aside#left{
+    float:left;
+    width:22%;
+    height:70%;
+}
+section{
+    float:left;
+    width:60%;
+    height:70;
+
+}
+footer{
+    clear:both;
+}
