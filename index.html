@@ -1,103 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let me introduce myself</title>
-    <link type="text/css" rel="stylesheet" href="mycss.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 귀여운 잡화점</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fff8fa;
+      color: #4d4d4d;
+      margin: 0;
+      padding: 0;
+    }
+    .top-banner {
+      background-color: #ffe0ec;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 15px;
+      color: #c84a78;
+      font-family: 'Chewy'
+    }
+    header {
+      background: url("image/place.jpg") no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-family: 'Chewy', cursive;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Noto+Sans+KR:wght@100..900&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    
+    /* 탭 메뉴 스타일 */
+    nav {
+      background-color: #ffb6c1;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+    }
+    nav button {
+      background: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      font-size: 01rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: #c84a78;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav button.active,
+    nav button:hover {
+      background-color: #c84a78;
+      color: white;
+    }
+
+    /* 섹션 기본 숨김 */
+    section.content-section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    /* 활성 섹션 보이기 */
+    section.content-section.active {
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ff6fa1;
+      font-family: 'Chewy', cursive;
+    }
+
+    /* 상품 그리드 */
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      width: 200px;
+      background: #fffdfd;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(255, 150, 180, 0.2);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .btn {
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    footer {
+      background: #fce4ec;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #a85c7b;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1><a href="#">Getting to know me</a></h1>
-    </header>
-    font-family: "Delius Swash Caps", cursive;
+  <div class="top-banner">
+    🎀 신상품 3% 할인 중! 지금 바로 확인해보세요! 🎁
+  </div>
 
-    <style>
-        ul{
-            list-style:none;
-            text-align: center;
-            
-        }
+  <header>
+    <h1>A store that sells cute things</h1>
+  </header>
 
-    </style>
+  <!-- 탭 메뉴 -->
+  <nav>
+    <button class="tab-button active" data-target="intro">소개</button>
+    <button class="tab-button" data-target="product">상품</button>
+    <button class="tab-button" data-target="basket">장바구니</button>
+    <button class="tab-button" data-target="order">주문</button>
+  </nav>
 
-   <nav>
-    <ul>
-        <li><a herf="#">home</a></li>
-        <li><a herf="#">News</a></li>
-        <li><a herf="#">My Cart</a></li>
-        <li><a herf="signin.html">Sign in</a></li>
-        <li><a href="#">Sign up</a></li>
-    </ul>
+  <!-- 소개 섹션 -->
+  <section id="intro" class="content-section active">
+    <h2 class="section-title">Introduction Letter</h2>
+    <p>
+      귀여운 건 언제나 옳아!<br />
+      취향저격 소품들이 기다리고 있어요.<br />
+      지금 바로 귀여움 충전하러 가볼까요?
+    </p>
+  </section>
 
+  <!-- 상품 섹션 -->
+  <section id="product" class="content-section active">
+  <h2 class="section-title">The Product</h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="image/gallery/doll1.jpg" alt="안경 소녀 키링" />
+      <p>안경 소녀 키링</p>
+      <p>10,000원</p>
+    </div>
+    <div class="card">
+      <img src="image/gallery/cake.jpg" alt="핫케이크 인형" />
+      <p>핫케이크 인형</p>
+      <p>25,000원</p>
+    </div>
+    <div class="card">
+      <img src="image/gallery/keyring1.jpg" alt="별 펠트 키링" />
+      <p>별 펠트 키링</p>
+      <p>10,000원</p>
+    </div>
+    <div class="card">
+      <img src="image/gallery/keyring2.jpg" alt="새우튀김 키링" />
+      <p>새우튀김 키링</p>
+      <p>18,000원</p>
+    </div>
+    <div class="card">
+      <img src="image/gallery/doll2.jpg" alt="파르페 인형" />
+      <p>파르페 인형</p>
+      <p>20,000원</p>
+      </div>
+      <div class="card">
+      <img src="image/gallery/cat.jpg" alt="부릉 고양이 인형" />
+      <p>부릉 고양이 인형</p>
+      <p>30,000원</p>
 
-   </nav>
-<aside id="left">
+      </div>
+    </div>
+  </section>
 
-    <ul>
-    <li><a target="iframe1" href="space.html">장소</a></li>
-    <li><a target="iframe1" href="clothes.html">옷</a></li>
-    <li><a target="iframe1" href="like.html">좋아하는 것</a></li>
-    <li><a target="iframe1" href="interests.html">관심사</a></li>
-    
-    </ul>
-
-    <ul class="nav">
-    <li><a href="#"> home</a></li>   
-    <li><a href="#" Blog></a></li> 
-    <li><a href="#" About></a></li>
-    <li><a href="#" contects></a></li>
-
-    </ul>
-
-</aside>
-
-<aside id="right">
-
-    <h4>광고</h4>
-    <p> 오늘 구매한 옷</p>
-    <p>바로 옷가게게에서</p>
-    <img src="Clothes like2.png">
-    <img src="Clothes like1.png">
-</aside>
-
-
-
-
-<section>
-    <iframe name="iframe1" src="manin.html" width="100%" height="100% style="border">
-    </iframe>
+  <!-- 장바구니 섹션 -->
+  <section id="basket" class="content-section">
+  <h2 class="section-title">Shopping Basket</h2>
+  <p>
+    마음에 들었다면, 주저 말고 장바구니에 쏙!<br />
+    놓치면 아쉬운 귀여움, 장바구니에 담아보세요💕
+  </p>
+  <div style="margin-top: 20px;">
+    <button class="btn" onclick="alert('아직 구현 중이에요!')">🛒 장바구니 보기</button>
+    <button class="btn" onclick="alert('결제 기능은 준비 중입니다!')">💳 결제하러 가기</button>
+  </div>
 </section>
 
-<aside id="right">
-<h4>Log in</h4>
-<form action="#" method="get">
-아이디
-<input type="text">
-<br>
-패스워드
-<input type="password"><br>
-<input type="submit" vaule="로그인">
-<input type="reset" vaule="초기화">
-</form>
-</aside>
-<footer>
-    <ul>
-        <li><a href="#">공지사항</a></li>
-        <li><a href="#">개인정보처리방침</a></li>
-        <li><a href="#">인재채용</a></li>
-        <li><a href="#">저작권 방침</a></li>
-    </ul>
-</footer>
+<!-- 주문 섹션 -->
+<section id="order" class="content-section">
+  <h2 class="section-title">Order & Payment</h2>
+  <p>결제 및 주문을 위해 로그인이 필요합니다.</p>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="login.html" class="btn">🔐 Sign In</a>
+    <button class="btn" onclick="alert('로그아웃 기능은 준비 중입니다.')">🚪 Sign Out</button>
+  </div>
+</section>
 
+  <footer>
+    📞 전화 문의 10:00 ~ 18:00 / 💬 카톡 문의 24시간<br />
+    <small>Copyright © Minji cop.</small>
+  </footer>
 
+  <script>
+    // 탭 버튼 클릭 시 섹션 표시 제어
+    const tabs = document.querySelectorAll('.tab-button');
+    const sections = document.querySelectorAll('.content-section');
 
+    tabs.forEach(tab => {0
+      tab.addEventListener('click', () => {
+        // 모든 탭 비활성화, 모든 섹션 숨기기
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
 
-
+        // 클릭한 탭 활성화, 대응 섹션 보이기
+        tab.classList.add('active');
+        const target = tab.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

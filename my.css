@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 귀여운 잡화점</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #fff8fa;
+            color: #4d4d4d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-banner {
+            background-color: #ffe0ec;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #c84a78;
+            font-family: 'Chewy', cursive;
+        }
+
+        header {
+            background: url("image/place.jpg") no-repeat center center/cover;
+            height: 300px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-family: 'Chewy', cursive;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: #ff6fa1;
+            font-family: 'Chewy', cursive;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 0 20px 40px;
+        }
+
+        .card {
+            width: 200px;
+            background: #fffdfd;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 150, 180, 0.2);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #fce4ec;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #a85c7b;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        🎀 신상품 3% 할인 중! 지금 바로 확인해보세요! 🎁
+    </div>
+
+    <header>
+        <h1>a store that sells cute things</h1>
+        <nav>
+            <ul>
+                <li><a href="#IlArea">소개</a></li>
+                <li><a href="#ProductArea">상품</a></li>
+                <li><a href="#basketArea">장바구니</a></li>
+                <li><a href="#orderArea">주문</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <section id="basketArea">
+        <h2 class="section-title">Shopping Basket</h2>
+        <p style="text-align:center;">마음에 들었다면, 주저 말고 장바구니에 쏙!<br>
+        놓치면 아쉬운 귀여움, 장바구니에 담아보세요💕</p>
+    </section>
+
+    <section id="orderArea">
+        <h2 class="section-title">Order & Payment</h2>
+        <p style="text-align:center;">결제 및 주문을 위해 로그인이 필요합니다.</p>
+        <div style="text-align:center;">
+            <a href="login.html"><button class="btn">🔐 Sign In</button></a>
+            <button class="btn" onclick="alert('로그아웃 기능은 준비 중입니다.')">🚪 Sign Out</button>
+        </div>
+    </section>
+
+    <footer>
+        📞 전화 문의 10:00 ~ 18:00 / 💬 카톡 문의 24시간<br>
+        <small>Copyright © Minji cop.</small>
+    </footer>
+</body>
+</html>
